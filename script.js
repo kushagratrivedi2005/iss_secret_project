@@ -38,18 +38,44 @@ document.getElementById('backgroundMusic').addEventListener('change', function()
     }
 });
 
-
 function handleFiles(files) {
     let storedImages = JSON.parse(localStorage.getItem('uploadedImages')) || [];
-    
+
+    // Clear the uploadedImagesContainer before adding new images
+    uploadedImagesContainer.innerHTML = '';
+
     for (const file of files) {
+        const imgContainer = document.createElement('div'); // Container for each image
+        imgContainer.classList.add('image-container');
+
         const img = document.createElement('img');
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'Remove';
+        removeBtn.classList.add('remove-button');
+
         const imageUrl = URL.createObjectURL(file);
 
         img.src = imageUrl;
-        uploadedImagesContainer.appendChild(img);
+        img.style.width = '100px'; // Set the width of the image (adjust as needed)
+        img.style.height = '100px'; // Set the height of the image (adjust as needed)
+        img.style.objectFit = 'cover'; // Maintain aspect ratio within fixed dimensions
+        imgContainer.appendChild(img);
+        imgContainer.appendChild(removeBtn);
+        uploadedImagesContainer.appendChild(imgContainer);
 
         storedImages.push(imageUrl);
+
+        // Attach a click event to the remove button
+        removeBtn.addEventListener('click', function() {
+            // Remove the image container from the DOM
+            imgContainer.remove();
+
+            // Remove the corresponding image URL from the storedImages array
+            storedImages = storedImages.filter((url) => url !== imageUrl);
+
+            // Save the updated image URLs to local storage
+            localStorage.setItem('uploadedImages', JSON.stringify(storedImages));
+        });
     }
 
     // Save the updated image URLs to local storage
@@ -61,6 +87,5 @@ const selectedDuration = parseInt(durationInput.value, 10); // Convert to intege
 
 // Use selectedDuration when creating the video
 createVideo(selectedDuration);
-
 
 // Add more JavaScript for other functionalities
