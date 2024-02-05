@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --bs-body-bg: #00bfff;
+}
+
+body {
+    background-image: url('cool.png');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+
+/* Simple navbar styles */
+h2 {
+    margin-top: 20px;
+}
+
+/* Simple footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Header styles */
 header {
     background-color: #333;
     color: #fff;
@@ -5,6 +33,7 @@ header {
     text-align: center;
 }
 
+/* Container styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -17,11 +46,13 @@ header {
     font-size: 24px;
     font-weight: bold;
 }
+
+/* Navbar styles */
 nav {
     background-color: #333;
     padding: 10px;
     display: flex;
-    justify-content: space-between; /*Ensure links are evenly spaced*/
+    justify-content: space-between;
 }
 
 nav a {
@@ -32,13 +63,15 @@ nav a {
 }
 
 #user-authentication {
-    margin-left: auto; /* Move User Authentication to the right */
+    margin-left: auto;
 }
 
+/* Main styles */
 main {
     padding: 20px;
 }
 
+/* Footer styles */
 footer {
     background-color: #333;
     color: #fff;
@@ -46,64 +79,63 @@ footer {
     text-align: center;
 }
 
-/* Add styles for sections with box shadow and increased size */
+/* Section styles */
 .section {
     padding: 20px;
     border-radius: 30px;
     margin-top: 20px;
-    width: 85%; /* Limit the width to 70% */
-    margin: auto; /* Center the section */
+    width: 85%;
+    margin: auto;
     margin-bottom: 40px;
-    border: 2px solid black; /* Black border */
+    border: 2px solid black;
     box-shadow: -10px 10px 0px rgba(33, 33, 33, 1),
                 -20px 20px 0px rgba(33, 33, 33, 0.7),
                 -30px 30px 0px rgba(33, 33, 33, 0.4),
-                -40px 40px 0px rgba(33, 33, 33, 0.1); /* Add box shadow */
+                -40px 40px 0px rgba(33, 33, 33, 0.1);
 }
 
-/* Styles for Image Container */
+/* Image Container styles */
 .image-container {
     display: flex;
-    flex-direction: column; /* Arrange items vertically */
-    align-items: center; /* Center-align items horizontally */
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-container img {
-    max-width: 100%; /* Ensure images don't exceed the container width */
-    margin-bottom: 10px; /* Add some space between images */
+    max-width: 100%;
+    margin-bottom: 10px;
 }
 
-/* Additional styling for each section goes here */
-
+/* Additional section styling */
 #upload-container,
 #preview-container,
 #output-settings,
 #user-authentication {
-    text-align: center; /* Center-align the text */
+    text-align: center;
 }
 
 #upload-container {
-    background-color: #0cc871; /* Blue background */
+    background-color: #0cc871;
 }
 
 #video-customization {
-    background-color: #e74c3c; /* Red background */
+    background-color: #e74c3c;
 }
 
 #preview-container {
-    background-color: #f39c12; /* Neon background */
+    background-color: #f39c12;
 }
 
 #output-settings {
-    background-color: #ddff47; /* Orange background */
+    background-color: #ddff47;
 }
 
 #user-authentication {
-    background-color: #00ffff; /* Cyan background */
+    background-color: #00ffff;
 }
 
 /* Header for the site */
-.site-header{
+.site-header {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -112,3 +144,51 @@ footer {
 .site-header h1 {
     font-weight: 700;
 }
+
+.site-header h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+  #upload-container {
+    animation:0.5s animate-fade 1s backwards
+  }
+
+  #video-customization {
+    animation:0.5s animate-fade 2s backwards
+  }
+
+  #preview-container {
+    animation:0.5s animate-fade 3s backwards
+  }
+
+  #output-settings {
+    animation:0.5s animate-fade 4s backwards
+  }
+  
+  @keyframes animate-fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
