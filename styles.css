@@ -103,19 +103,12 @@ footer {
 }
 
 /* Header for the site */
-.site-header {
+.site-header{
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
-    font-weight: 700;
 }
 
 .site-header h1 {
-    font-size: 36px;
-    color: #333;
-}
-
-.site-header h2 {
-    font-size: 24px;
-    color: #333;
+    font-weight: 700;
 }
