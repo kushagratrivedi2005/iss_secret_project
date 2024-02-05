@@ -1,9 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: antiquewhite;
-}
-
 header {
     background-color: #333;
     color: #fff;
@@ -23,22 +17,22 @@ header {
     font-size: 24px;
     font-weight: bold;
 }
-
-.navbar {
-    list-style-type: none;
+nav {
+    background-color: #333;
+    padding: 10px;
     display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar li {
-    margin-right: 20px;
+    justify-content: space-between; /*Ensure links are evenly spaced*/
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    margin-right: 20px;
+}
+
+#user-authentication {
+    margin-left: auto; /* Move User Authentication to the right */
 }
 
 main {
@@ -52,19 +46,28 @@ footer {
     text-align: center;
 }
 
-/* ... (previous styles) */
-
 /* Add styles for sections */
 .section {
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
-    
     text-align: center; /* Center-align the text */
     width: 85%; /* Limit the width to 70% */
     margin: auto; /* Center the section */
     margin-bottom: 15px;
     border: 2px solid black; /* Black border */
+}
+
+/* Styles for Image Container */
+.image-container {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center-align items horizontally */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensure images don't exceed the container width */
+    margin-bottom: 10px; /* Add some space between images */
 }
 
 /* Additional styling for each section goes here */
@@ -78,7 +81,7 @@ footer {
 }
 
 #upload-container {
-    background-color: #3498db; /* Blue background */
+    background-color: #0cc871; /* Blue background */
 }
 
 #video-customization {
@@ -90,7 +93,7 @@ footer {
 }
 
 #output-settings {
-    background-color: #ff6347; /* Orange background */
+    background-color: #ddff47; /* Orange background */
 }
 
 #user-authentication {

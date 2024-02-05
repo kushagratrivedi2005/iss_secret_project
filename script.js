@@ -85,6 +85,20 @@ function handleFiles(files) {
 const durationInput = document.getElementById('duration');
 const selectedDuration = parseInt(durationInput.value, 10); // Convert to integer
 
+function applyOutputSettings() {
+    // Get selected resolution and quality
+    var selectedResolution = document.getElementById("resolution").value;
+    var selectedQuality = document.getElementById("quality").value;
+
+    // Use the selected values as needed (you may send them to the server or use them client-side)
+    console.log("Selected Resolution: ", selectedResolution);
+    console.log("Selected Quality: ", selectedQuality);
+
+    // Add logic to apply settings (e.g., send an API request, update video preview, etc.)
+    // This can be done using AJAX, fetch API, or other methods depending on your setup.
+}
+
+
 // Use selectedDuration when creating the video
 createVideo(selectedDuration);
 
