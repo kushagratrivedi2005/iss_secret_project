@@ -49,9 +49,8 @@ footer {
 /* Add styles for sections */
 .section {
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 30px;
     margin-top: 20px;
-    text-align: center; /* Center-align the text */
     width: 85%; /* Limit the width to 70% */
     margin: auto; /* Center the section */
     margin-bottom: 15px;
@@ -73,7 +72,6 @@ footer {
 /* Additional styling for each section goes here */
 
 #upload-container,
-#video-customization,
 #preview-container,
 #output-settings,
 #user-authentication {
@@ -105,6 +103,7 @@ footer {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
+    font-weight : 700;
 }
 
 .site-header h1 {

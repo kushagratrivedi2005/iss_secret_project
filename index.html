@@ -14,7 +14,8 @@
         }
 
         body {
-            background-color: var(--bs-body-bg);
+            background-image: url('cool.png');
+            background-size: cover;
             margin: 0;
             padding: 0;
             
@@ -52,7 +53,7 @@
     </div>
     
 
-    <div id="upload-container" class = "section">
+    <div id="upload-container" class = "section image-container">
         <h2>Upload Images</h2>
         <div id="drop-area">
             <p>Drag and drop images here</p>
@@ -61,7 +62,7 @@
         <div id="uploadedImages"></div>
     </div>
 
-    <div id="video-customization" class = "section image-container">
+    <div id="video-customization" class = "section">
         <h2>Video Customization</h2>
             
         <label for="photoSelect">Select Photos:</label>
@@ -89,7 +90,7 @@
     <div id="output-settings" class = "section">
         <h2>Output Settings</h2>
             <label for="resolution">Resolution:</label>
-            <select id="resolution">
+            <select id="resolution" style="margin-right: 2vw">
                 <option value="720p">720p</option>
                 <option value="1080p">1080p</option>
                 <option value="4k">4k</option>
@@ -106,10 +107,9 @@
         </div>
     </div>
 
-    <div id="user-authentication" class = "section">
+    <!-- <div id="user-authentication" class = "section">
         <h2>User Authentication</h2>
-        <!-- Add elements for login and signup -->
-    </div>
+    </div> -->
 
     <footer>
         <p>&copy; 2024 Your Website. All rights reserved.</p>
