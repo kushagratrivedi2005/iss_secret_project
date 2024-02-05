@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* ... (previous styles) */
+
+/* Add styles for sections */
+.section {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    
+    text-align: center; /* Center-align the text */
+    width: 85%; /* Limit the width to 70% */
+    margin: auto; /* Center the section */
+    margin-bottom: 15px;
+    border: 2px solid black; /* Black border */
+}
+
+/* Additional styling for each section goes here */
+
+#upload-container,
+#video-customization,
+#preview-container,
+#output-settings,
+#user-authentication {
+    text-align: center; /* Center-align the text */
+}
+
+#upload-container {
+    background-color: #3498db; /* Blue background */
+}
+
+#video-customization {
+    background-color: #e74c3c; /* Red background */
+}
+
+#preview-container {
+    background-color: #f39c12; /* Neon background */
+}
+
+#output-settings {
+    background-color: #ff6347; /* Orange background */
+}
+
+#user-authentication {
+    background-color: #00ffff; /* Cyan background */
+}
+
+/* Header for the site */
+.site-header {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.site-header h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.site-header h2 {
+    font-size: 24px;
+    color: #333;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Video Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+        
+        body {
+            font-family: 'Lora', serif;
+        }
+
+        /* Simple navbar styles */
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        /* Simple footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#upload-container">Upload Images</a>
+        <a href="#video-customization">Video Customization</a>
+        <a href="#preview-container">Preview</a>
+        <a href="#output-settings">Output Settings</a>
+        <a href="#user-authentication">User Authentication</a>
+    </nav>
+
+    <div class="site-header">
+        <h1>Convert your images to a slideshow here!</h1>
+    </div>
+    
+
+    <div id="upload-container" class = "section">
+        <h2>Upload Images</h2>
+        <div id="drop-area">
+            <p>Drag and drop images here</p>
+            <input type="file" id="imageUpload" accept=".jpg, .jpeg, .png" multiple>
+        </div>
+        <div id="uploadedImages"></div>
+    </div>
+
+    <div id="video-customization" class = "section">
+        <h2>Video Customization</h2>
+            
+        <label for="photoSelect">Select Photos:</label>
+        <input type="file" id="photoSelect" accept=".jpg, .jpeg, .png" style="display: none;" multiple>
+        <button onclick="document.getElementById('photoSelect').click()">Choose Photos</button>
+        
+        <label for="backgroundMusic">Background Music:</label>
+        <input type="file" id="backgroundMusic" accept=".mp3, .ogg, .wav">
+        <audio controls id="audioPreview"></audio>
+        
+        <label for="duration">Duration (seconds):</label>
+        <input type="number" id="duration" min="1" value="10">
+            
+        <!-- Add more elements for transitions, effects, etc. -->
+        
+    </div>
+
+    <div id="preview-container" class = "section">
+        <h2>Preview</h2>
+        <video controls id="videoPreview" width="400">
+            <!-- Add video source here -->
+        </video>
+    </div>
+
+    <div id="output-settings" class = "section">
+        <h2>Output Settings</h2>
+        <!-- Add elements for selecting output resolution and quality -->
+    </div>
+
+    <div id="user-authentication" class = "section">
+        <h2>User Authentication</h2>
+        <!-- Add elements for login and signup -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
