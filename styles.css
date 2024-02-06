@@ -192,3 +192,26 @@ footer {
       opacity: 1;
     }
   }
+
+  .video-customization {
+    text-align: left; /* Align text to the left */
+}
+
+.video-customization label,
+.video-customization input,
+.video-customization button,
+.video-customization audio {
+    display: block; /* Ensure each element is on a new line */
+    margin-bottom: 10px; /* Add spacing between elements */
+    width: 100%; /* Make each element take full width */
+}
+
+.video-customization button {
+    width: auto; /* Adjust the width as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.video-customization input[type="number"] {
+    width: 100px; /* Adjust the width as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}

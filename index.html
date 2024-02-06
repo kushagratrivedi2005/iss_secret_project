@@ -43,7 +43,7 @@
             <a href="#video-customization">Video Customization</a>
             <a href="#preview-container">Preview</a>
             <a href="#output-settings">Output Settings</a>
-            <a href="userlogin/New Folder/registration.html">User Authentication</a>
+            <a href="userlogin/html_sites/registration.html">User Authentication</a>
 
         </nav>
 
@@ -61,22 +61,21 @@
         <div id="uploadedImages"></div>
     </div>
 
-    <div id="video-customization" class = "section">
+    <div id="video-customization" class="video-customization section">
         <h2>Video Customization</h2>
-            
+    
         <label for="photoSelect">Select Photos:</label>
         <input type="file" id="photoSelect" accept=".jpg, .jpeg, .png" style="display: none;" multiple>
         <button onclick="document.getElementById('photoSelect').click()">Choose Photos</button>
-        
+    
         <label for="backgroundMusic">Background Music:</label>
         <input type="file" id="backgroundMusic" accept=".mp3, .ogg, .wav">
         <audio controls id="audioPreview"></audio>
-        
+    
         <label for="duration">Duration (seconds):</label>
         <input type="number" id="duration" min="1" value="10">
-            
+    
         <!-- Add more elements for transitions, effects, etc. -->
-        
     </div>
 
     <div id="preview-container" class = "section">
