@@ -39,6 +39,7 @@ document.getElementById('backgroundMusic').addEventListener('change', function()
 });
 
 function handleFiles(files) {
+    // Parse the stored images from localStorage or initialize an empty array
     let storedImages = JSON.parse(localStorage.getItem('uploadedImages')) || [];
 
     // Clear the uploadedImagesContainer before adding new images
@@ -56,9 +57,9 @@ function handleFiles(files) {
         const imageUrl = URL.createObjectURL(file);
 
         img.src = imageUrl;
-        img.style.width = '100px'; // Set the width of the image (adjust as needed)
-        img.style.height = '100px'; // Set the height of the image (adjust as needed)
-        img.style.objectFit = 'cover'; // Maintain aspect ratio within fixed dimensions
+        img.style.width = '100px';
+        img.style.height = '100px';
+        img.style.objectFit = 'cover';
         imgContainer.appendChild(img);
         imgContainer.appendChild(removeBtn);
         uploadedImagesContainer.appendChild(imgContainer);
@@ -66,7 +67,7 @@ function handleFiles(files) {
         storedImages.push(imageUrl);
 
         // Attach a click event to the remove button
-        removeBtn.addEventListener('click', function() {
+        removeBtn.addEventListener('click', function () {
             // Remove the image container from the DOM
             imgContainer.remove();
 
@@ -81,6 +82,7 @@ function handleFiles(files) {
     // Save the updated image URLs to local storage
     localStorage.setItem('uploadedImages', JSON.stringify(storedImages));
 }
+
 
 const durationInput = document.getElementById('duration');
 const selectedDuration = parseInt(durationInput.value, 10); // Convert to integer
