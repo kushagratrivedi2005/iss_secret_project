@@ -23,6 +23,17 @@ body {
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
   }
+  .container-admin {
+    width: 80% !important; /* Use !important to override any conflicting styles */
+    max-width: 100%;
+    margin: 0 auto; /* Center the container horizontally */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
   
   form {
     display : flex;
