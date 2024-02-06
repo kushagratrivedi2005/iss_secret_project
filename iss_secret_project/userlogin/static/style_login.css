@@ -23,7 +23,7 @@ body {
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
   }
-  .container-admin {
+  .cont_admin {
     width: 80% !important; /* Use !important to override any conflicting styles */
     max-width: 100%;
     margin: 0 auto; /* Center the container horizontally */
