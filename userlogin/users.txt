@@ -1,5 +1,0 @@
-{"name": "admin", "email": "admin@a", "password": "pbkdf2:sha256:600000$VasjaoKGvwALXp1Y$838ca81c96957a37e680edf636327b7c876a6558adbb963d25106727929cf74b"}
-{"name": "abcde", "email": "abcde@a", "password": "pbkdf2:sha256:600000$DNkRrhQPbNE8CRxl$38b32bf373468df920907da2f1f0658cb987b34991781f7a1f120ce3b0303278"}
-{"name": "abcd", "email": "abcd@a", "password": "pbkdf2:sha256:600000$nqxiqxaMSDFZH5Us$41f16b981001606040a8028ce93b6462f15fa5bb74264fc9121c8788e2b57ac5"}
-
-
