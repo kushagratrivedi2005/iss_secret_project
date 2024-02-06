@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import json
 from werkzeug.security import generate_password_hash,check_password_hash
 
-app = Flask(__name__, template_folder='New Folder')
+app = Flask(__name__, template_folder='html_sites')
 app.secret_key = 'your_secret_key_here'
 
 @app.route('/', methods=['GET', 'POST'])
