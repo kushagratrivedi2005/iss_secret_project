@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_login.css') }}">
 </head>
 <body>
+    <div class = container>
     <h1>User Profile</h1>
     {% if user_data %}
         <p>Username: {{ user_data['email'] }}</p>
@@ -16,5 +25,6 @@
         <p>User not found</p>
     {% endif %}
     <p><a href="{{ url_for('index') }}">Go Home</a></p>
+</div>
 </body>
 </html>

@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style_login.css') }}">
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        </style>
+        
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_login.css') }}">
 </head>
 <body>
+    <div class = "container">
     <h1>Login</h1>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -24,8 +34,8 @@
         <input type="password" id="password" name="password" required><br>
         <input type="submit" value="Login">
     </form>
-    <p>Don't have an account? <a href="{{ url_for('registration') }}">Register<
-    </a></p>
+    <p>Don't have an account? <a href="{{ url_for('registration') }}">Register</a></p>
     <p>Admin? <a href="{{ url_for('admin_login') }}">Login as Admin</a></p>
+</div>
 </body>
 </html>

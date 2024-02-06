@@ -5,3 +5,4 @@
 {"name": "d@d", "email": "d@d", "password": "pbkdf2:sha256:600000$cG2gtM9O0G3fyXU2$cb086cdc0e52dbe64077c80f903fddce85492f1afc59819da29c753315d0fdda"}
 {"name": "yyyy", "email": "yy@y", "password": "pbkdf2:sha256:600000$8lNRTWSlO7QDgxYq$a1258db28fe00c58cd947689de731c0c85339fe69ef538b94eddbf00c3e0a08e"}
 {"name": "z", "email": "z@z", "password": "pbkdf2:sha256:600000$SD6KQmDleKg0CVLJ$daef61ab8ebb1cd73cec05ca5aa7c45112389d1ced8c89c8a26bd3a5e47a2e9d"}
+{"name": "Ananth", "email": "lol@gmail.com", "password": "pbkdf2:sha256:600000$O2uy7BN1bXjkR3VC$57075df2700f55c56d78ccef53c1df14dd0b9bab33d51aa7672caf86e4cb9812"}
