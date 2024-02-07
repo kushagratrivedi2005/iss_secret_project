@@ -1,4 +1,4 @@
-    
+document.addEventListener('DOMContentLoaded', function() {    
     const dropArea = document.getElementById('drop-area');
     const imageUpload = document.getElementById('imageUpload');
     const uploadedImagesContainer = document.getElementById('uploadedImages');
