@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    alert('Welcome to your homepage!');
     
     const dropArea = document.getElementById('drop-area');
     const imageUpload = document.getElementById('imageUpload');
@@ -68,8 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             storedImages.push(imageUrl);
 
-            // Alert that an image has been added
-            alert('Image added successfully!');
 
             removeBtn.addEventListener('click', function () {
                 imgContainer.remove();
