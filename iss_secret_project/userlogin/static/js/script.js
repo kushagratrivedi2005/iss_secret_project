@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             storedImages.push(imageUrl);
 
-
             removeBtn.addEventListener('click', function () {
                 imgContainer.remove();
                 storedImages = storedImages.filter((url) => url !== imageUrl);
@@ -78,13 +77,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const durationInput = document.getElementById('duration');
-    const selectedDuration = parseInt(durationInput.value, 10);
+    let selectedDuration = parseInt(durationInput.value, 10);
 
     function applyOutputSettings() {
         var selectedResolution = document.getElementById("resolution").value;
         var selectedQuality = document.getElementById("quality").value;
         console.log("Selected Resolution: ", selectedResolution);
         console.log("Selected Quality: ", selectedQuality);
+
+        createVideo(selectedDuration);
+    }
+
+    var video = document.getElementById("videoPreview");
+
+    function playPause() {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+
+    function rewind() {
+        video.currentTime = 0;
+    }
+
+    // Function to create video with the given duration
+    function createVideo(duration) {
+        // You can add the logic to create the video here based on the duration
+        // For simplicity, I'm setting a sample video source
+        video.src = "{{ url_for('static', filename='sample.mp4') }}";
     }
 
     createVideo(selectedDuration);

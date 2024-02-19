@@ -88,6 +88,10 @@
             <source src="{{ url_for('static', filename='sample.mp4') }}" type="video/mp4">
             <!-- Add video source here -->
         </video>
+        <div>
+            <button onclick="playPause()">Play/Pause</button>
+            <button onclick="rewind()">Rewind</button>
+        </div>
     </div>
 
     <div id="output-settings" class = "section">
