@@ -1,9 +1,18 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, make_response
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity, decode_token
 import json
-from werkzeug.security import generate_password_hash,check_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import timedelta
 
-app = Flask(__name__, template_folder='html_sites')
+app = Flask(_name_, template_folder='html_sites')
 app.secret_key = 'your_secret_key_here'
+jwt = JWTManager(app)
+
+app.config['JWT_SECRET_KEY'] = 'super-secret'
+app.config['JWT_SECRET_KEY'] = 'super-secret'
+app.config['JWT_COOKIE_SECURE'] = False # Only for development, set to True for production
+app.config['JWT_ACCESS_COOKIE_PATH'] = '/user'
+app.config['JWT_REFRESH_COOKIE_PATH'] = '/login'
 
 @app.route('/')
 def index():
@@ -29,7 +38,9 @@ def confirmation():
     return render_template('confirmation.html')
 
 @app.route('/user/<user_id>')
+@jwt_required()
 def user_detail(user_id):
+    current_user = get_jwt_identity()
     user_data = get_user_data(user_id)
     if user_data:
         return render_template('user_detail.html', user_data=user_data)
@@ -42,15 +53,19 @@ def login():
         email = request.form.get('email')
         password = request.form.get('password')
 
-        user_data = get_user_data(email)  
-        print(f"Entered Password: {password}")
-        print(user_data)
-        if user_data:
-            print(f"Stored Hashed Password: {user_data['password']}")
-            if check_password_hash(user_data['password'], password):
-                return redirect(url_for('user_detail', user_id=email))
+        user_data = get_user_data(email)
+        if user_data and check_password_hash(user_data['password'], password):
+            # Generate JWT token for the user
+            access_token = create_access_token(identity=email, expires_delta=timedelta(days=7))
+            print(access_token)
+            decoded = decode_token(access_token)
+            print(decoded)
+            response = make_response(redirect(url_for('user_detail', user_id=email)))
+            response.set_cookie('access_token_cookie', value=access_token, max_age=3600, httponly=True)
+            print(response.headers)
+            return response
         
-        return redirect(url_for('login', user_not_found=True))
+        flash('Invalid email or password', 'error')
 
     return render_template('login.html')
 
@@ -97,5 +112,5 @@ def get_all_user_details():
     return user_details
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     app.run(debug=True)
