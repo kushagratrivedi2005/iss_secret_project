@@ -8,3 +8,4 @@
 {"name": "Ananth", "email": "lol@gmail.com", "password": "pbkdf2:sha256:600000$O2uy7BN1bXjkR3VC$57075df2700f55c56d78ccef53c1df14dd0b9bab33d51aa7672caf86e4cb9812"}
 {"name": "N", "email": "lol@gmail.com", "password": "pbkdf2:sha256:600000$72zO3CdJ2OUwH00R$3baf7931a2298935163a583fb21d6ecfab89e01795dfeafa287f17b6ff5230e7"}
 {"name": "a", "email": "a@a", "password": "pbkdf2:sha256:260000$PxrRIy1mQUXJiwN7$c190211e470706da43ea0e0764198585464dfe7c03abb4fee659984656177a2a"}
+{"name": "a", "email": "a@a", "password": "pbkdf2:sha256:600000$G3FdRz5hDIjkFvqS$534e0f3e7103a2bb3e2f3dae938dd07d4cd15a8d2e2cb715ee63183deaef47e5"}

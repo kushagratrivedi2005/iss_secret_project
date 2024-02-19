@@ -4,7 +4,7 @@ import json
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import timedelta
 
-app = Flask(_name_, template_folder='html_sites')
+app = Flask(__name__, template_folder='html_sites')
 app.secret_key = 'your_secret_key_here'
 jwt = JWTManager(app)
 
@@ -112,5 +112,5 @@ def get_all_user_details():
     return user_details
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
